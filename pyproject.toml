@@ -11,7 +11,7 @@ requires-python = ">=3.10"
 authors = [
     { name = "JSieve Project" }
 ]
-license = { text = "MIT" }
+license = "MIT"
 keywords = ["javascript", "recon", "security", "endpoints", "secrets", "bug-bounty"]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -31,7 +31,7 @@ jsieve = "main:main"
 
 [tool.setuptools]
 py-modules = ["main"]
-packages = ["analyzer", "collector", "recon", "reporting", "tests"]
+packages = ["analyzer", "collector", "recon", "reporting"]
 
 [tool.setuptools.package-data]
 "*" = ["*.txt", "*.json", "*.md"]
