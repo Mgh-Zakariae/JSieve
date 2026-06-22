@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jsieve"
+version = "1.0.0"
+description = "Passive JavaScript reconnaissance tool for endpoint and exposed-secret discovery."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "JSieve Project" }
+]
+license = { text = "MIT" }
+keywords = ["javascript", "recon", "security", "endpoints", "secrets", "bug-bounty"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "jsbeautifier>=1.15.1",
+    "pandas>=2.0.0",
+]
+
+[project.scripts]
+jsieve = "main:main"
+
+[tool.setuptools]
+py-modules = ["main"]
+packages = ["analyzer", "collector", "recon", "reporting", "tests"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.json", "*.md"]
